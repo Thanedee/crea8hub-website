@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crea8Hub — Ideas That Move Businesses Forward</title>
+<meta name="description" content="Crea8Hub is a digital marketing and growth agency built for ambitious businesses that want more than visibility.">
+<style>
+/* ---------- self-hosted fonts (no external requests) ---------- */
+@font-face{font-family:'Raleway';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/raleway-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Raleway';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/raleway-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Raleway';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/raleway-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Raleway';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/raleway-latin-800-normal.woff2') format('woff2')}
+@font-face{font-family:'Lato';font-style:normal;font-weight:300;font-display:swap;src:url('assets/fonts/lato-latin-300-normal.woff2') format('woff2')}
+@font-face{font-family:'Lato';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/lato-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Lato';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/lato-latin-700-normal.woff2') format('woff2')}
+
+:root{
+  --green:#84C226;
+  --lime:#C3D92B;
+  --paper:#F1EFE9;
+  --black:#000;
+  --ink:#111;
+  --muted:#5b5b57;
+  --muted-dark:#b9b9b4;
+  --line:rgba(0,0,0,.14);
+  --line-dark:rgba(255,255,255,.16);
+  --maxw:1280px;
+  --pad:clamp(20px,5vw,80px);
+  --head:'Raleway',"Helvetica Neue",Arial,sans-serif;
+  --body:'Lato',"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--body);font-size:17px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+
+/* ---------- shared ---------- */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);width:100%}
+section{position:relative;overflow:hidden}
+.dark{background:var(--black);color:#fff}
+.dark .eyebrow-label{color:var(--green)}
+.eyebrow{display:flex;align-items:center;gap:14px;padding-top:clamp(28px,5vw,48px)}
+.eyebrow .num{font-family:var(--head);font-weight:800;font-size:13px;letter-spacing:.06em}
+.eyebrow .rule{width:26px;height:2px;background:currentColor;opacity:.55}
+.eyebrow-label{font-family:var(--head);font-weight:700;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--green)}
+h1,h2,h3,h4{font-family:var(--head);margin:0;letter-spacing:-.015em;line-height:1.07}
+h2.display{font-size:clamp(32px,5.2vw,60px);font-weight:800;text-transform:uppercase}
+.green{color:var(--green)}
+.lead{max-width:46ch;color:var(--muted);font-size:clamp(16px,1.35vw,19px)}
+.dark .lead{color:var(--muted-dark)}
+.hr{width:74px;height:2px;background:var(--green);margin:26px 0 22px;border:0}
+.hr.thin{background:var(--line);height:1px;width:110px}
+.dark .hr.thin{background:var(--line-dark)}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;font-family:var(--head);font-weight:700;
+  font-size:13px;letter-spacing:.12em;text-transform:uppercase;
+  padding:14px 26px;border-radius:999px;background:var(--green);color:#0a0a0a;
+  transition:transform .25s ease, background .25s ease, color .25s ease;white-space:nowrap;
+}
+.btn:hover{transform:translateY(-2px);background:var(--lime)}
+.btn.ghost{background:transparent;border:1.5px solid currentColor;color:inherit}
+.btn.ghost:hover{background:var(--green);border-color:var(--green);color:#0a0a0a}
+
+/* ---------- nav ---------- */
+header.nav{
+  position:sticky;top:0;z-index:60;background:rgba(0,0,0,.86);
+  backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;height:72px}
+.nav-logo img{height:30px;width:auto}
+.nav-links{display:flex;align-items:center;gap:clamp(14px,2vw,30px)}
+.nav-links a{
+  font-family:var(--head);font-weight:600;font-size:12.5px;letter-spacing:.11em;
+  text-transform:uppercase;color:#e9e9e6;opacity:.85;transition:color .2s,opacity .2s;
+}
+.nav-links a:hover{color:var(--green);opacity:1}
+.nav-cta{padding:11px 20px;font-size:11.5px}
+.nav-toggle{display:none;background:none;border:0;color:#fff;font-size:24px;cursor:pointer;padding:6px}
+@media (max-width:900px){
+  .nav-links{
+    position:fixed;inset:72px 0 auto 0;background:#000;flex-direction:column;align-items:flex-start;
+    gap:0;padding:8px var(--pad) 26px;border-bottom:1px solid rgba(255,255,255,.1);
+    transform:translateY(-120%);transition:transform .35s ease, visibility .35s;
+    visibility:hidden;max-height:calc(100vh - 72px);overflow-y:auto;
+  }
+  .nav-links.open{transform:translateY(0);visibility:visible}
+  .nav-links a{padding:13px 0;font-size:14px;width:100%;border-bottom:1px solid rgba(255,255,255,.07)}
+  .nav-links .btn{margin-top:16px}
+  .nav-toggle{display:block}
+}
+
+/* ---------- hero ---------- */
+.hero{background:var(--black);color:#fff;min-height:min(92vh,860px);display:flex;align-items:center;padding:clamp(40px,7vw,80px) 0}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(20px,4vw,60px);align-items:center}
+.hero-logo{width:clamp(230px,26vw,360px);margin-bottom:34px}
+.hero h1{font-size:clamp(30px,4.3vw,52px);font-weight:800;text-transform:uppercase;letter-spacing:.005em;line-height:1.14}
+.hero .tag{
+  margin-top:auto;font-family:var(--head);font-weight:700;font-size:clamp(12px,1.1vw,14px);
+  letter-spacing:.12em;text-transform:uppercase;color:#e7e7e3;padding-top:44px;
+}
+.hero-img{position:relative}
+.hero-img img{width:100%;filter:drop-shadow(0 30px 60px rgba(0,0,0,.6))}
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;gap:34px}
+  .hero-img{order:-1;max-width:460px;margin-inline:auto}
+}
+
+/* ---------- who we are ---------- */
+.who{background:var(--paper);padding-bottom:0}
+.who .grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(24px,4vw,56px);align-items:center;padding:clamp(24px,4vw,40px) 0 0}
+.who h2{font-size:clamp(30px,4.4vw,52px);font-weight:800;text-transform:uppercase;line-height:1.1}
+.pillars{
+  display:flex;flex-wrap:wrap;align-items:center;gap:clamp(12px,2.4vw,34px);
+  padding:clamp(26px,4vw,44px) 0 clamp(30px,5vw,54px);
+  font-family:var(--head);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:clamp(12px,1.2vw,15px);
+}
+.pillars .x{color:var(--green);font-weight:800}
+@media (max-width:860px){ .who .grid{grid-template-columns:1fr} }
+
+/* ---------- what we do ---------- */
+.cards{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin:clamp(34px,5vw,54px) 0 clamp(50px,7vw,80px)}
+.card{
+  border:1px solid rgba(255,255,255,.35);border-left:2px solid var(--green);
+  padding:24px 20px 28px;min-height:230px;display:flex;flex-direction:column;
+  transition:background .3s ease,transform .3s ease,border-color .3s ease;
+}
+.card:hover{background:rgba(132,194,38,.09);transform:translateY(-6px);border-color:var(--green)}
+.card .n{font-family:var(--head);font-weight:700;font-size:12px;color:var(--green);letter-spacing:.08em}
+.card .icon{height:46px;margin:14px 0 22px;display:flex;align-items:center;justify-content:center}
+.card .icon img{height:100%;width:auto}
+.card h3{font-size:16px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
+.card p{margin:0;font-size:15px;line-height:1.55;color:#cfcfc9}
+@media (max-width:1020px){ .cards{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:560px){ .cards{grid-template-columns:1fr} .card{min-height:0} }
+
+.execution{display:grid;grid-template-columns:.85fr 1.15fr;align-items:end;gap:clamp(16px,3vw,40px);padding-bottom:0}
+.execution h2{font-size:clamp(30px,4.6vw,56px);font-weight:800;text-transform:uppercase;line-height:1.08}
+.execution .chess{margin-bottom:-6px}
+@media (max-width:860px){ .execution{grid-template-columns:1fr} }
+
+/* ---------- services ---------- */
+.services{background:var(--paper)}
+.services .split{display:grid;grid-template-columns:1fr 1.1fr;gap:0;align-items:stretch}
+.services .list-col{padding:clamp(26px,4vw,50px) clamp(16px,3vw,40px) clamp(40px,6vw,70px) 0}
+.services h2{font-size:clamp(30px,4.4vw,52px);font-weight:800;text-transform:uppercase;margin-bottom:26px}
+.svc{display:flex;gap:20px;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--line);transition:padding-left .25s ease}
+.svc:hover{padding-left:10px}
+.svc .n{font-family:var(--head);font-weight:800;font-size:14px;color:var(--green);min-width:26px}
+.svc .t{font-size:clamp(15px,1.4vw,18px)}
+.services .photo{background:url('assets/studio.jpg') center/cover no-repeat;border-left:4px solid var(--green);min-height:420px}
+@media (max-width:860px){
+  .services .split{grid-template-columns:1fr}
+  .services .list-col{padding-right:0}
+  .services .photo{min-height:300px;border-left:0;border-top:4px solid var(--green)}
+}
+
+/* ---------- how we think ---------- */
+.think{background:#000;color:#fff}
+.think .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,5vw,70px);align-items:center;padding:clamp(34px,5vw,60px) 0 clamp(46px,6vw,80px)}
+.steps{display:flex;flex-direction:column;gap:6px}
+.step{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:flex-start;padding:14px 0;position:relative}
+.step .bubble{
+  width:72px;height:72px;border:1.5px solid var(--green);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;flex:none;background:#050505;
+  transition:background .3s ease, transform .3s ease;
+}
+.step:hover .bubble{background:rgba(132,194,38,.14);transform:scale(1.05)}
+.step .bubble img{width:34px;height:34px;object-fit:contain}
+.step h4{font-size:15px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;margin-bottom:6px}
+.step p{margin:0;color:var(--muted-dark);font-size:15.5px;line-height:1.5;max-width:34ch}
+.step:not(:last-child)::after{
+  content:"";position:absolute;left:36px;top:100px;bottom:-4px;width:1px;
+  background:linear-gradient(to bottom,rgba(132,194,38,.55),rgba(132,194,38,.12));
+}
+.think .panel h2{font-size:clamp(28px,3.6vw,44px);font-weight:800;text-transform:uppercase;line-height:1.12}
+.think .panel{position:relative;z-index:2}
+.think .door{
+  margin-top:34px;border-radius:2px;overflow:hidden;
+  -webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent);
+  mask-image:linear-gradient(to bottom,#000 55%,transparent);
+}
+@media (max-width:900px){ .think .grid{grid-template-columns:1fr} }
+
+/* ---------- process ---------- */
+.process{background:var(--paper)}
+.process .top{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(20px,4vw,50px);align-items:center;padding-top:clamp(20px,3vw,34px)}
+.process h2{font-size:clamp(28px,4vw,48px);font-weight:800;text-transform:uppercase}
+.flow{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(12px,2vw,24px);
+  margin:clamp(36px,5vw,58px) 0 clamp(46px,6vw,80px);
+}
+.node{display:flex;flex-direction:column;align-items:flex-start;position:relative}
+.node .circle{
+  width:86px;height:86px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:var(--green);margin-bottom:22px;transition:transform .3s ease;
+}
+.node:nth-child(even) .circle{background:#E7E5DE;border:1px solid var(--line)}
+.node:hover .circle{transform:translateY(-6px)}
+.node .circle img{width:42px;height:42px;object-fit:contain}
+.node .txt{border-left:2px solid rgba(132,194,38,.55);padding-left:16px}
+.node .n{font-family:var(--head);font-weight:800;font-size:13px;color:var(--green)}
+.node h4{font-size:15px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;margin:4px 0 8px}
+.node p{margin:0;font-size:14.5px;line-height:1.5;color:var(--muted)}
+@media (max-width:1020px){ .flow{grid-template-columns:repeat(2,1fr);gap:28px} }
+@media (max-width:860px){ .process .top{grid-template-columns:1fr} }
+@media (max-width:560px){ .flow{grid-template-columns:1fr} }
+
+/* ---------- the work ---------- */
+.work{background:var(--paper);position:relative}
+.work .brush{position:absolute;left:-6%;bottom:-40px;width:70%;opacity:.9;pointer-events:none}
+.work .head{display:grid;grid-template-columns:.8fr 2fr;gap:clamp(20px,4vw,50px);align-items:end;padding-top:clamp(20px,3vw,34px)}
+.work h2{font-size:clamp(30px,4.4vw,52px);font-weight:800;text-transform:uppercase}
+.frame{
+  margin:clamp(30px,4vw,46px) 0 clamp(50px,7vw,86px);background:#0b0b0b;
+  border:clamp(10px,1.6vw,20px) solid #161616;box-shadow:0 30px 70px rgba(0,0,0,.35);
+  padding:clamp(8px,1.2vw,14px);position:relative;z-index:2;
+}
+.gallery{columns:4;column-gap:8px}
+.gallery figure{margin:0 0 8px;break-inside:avoid;position:relative;overflow:hidden;background:#000}
+.gallery img{width:100%;transition:transform .5s ease,opacity .4s ease}
+.gallery figure:hover img{transform:scale(1.05);opacity:.9}
+@media (max-width:1020px){ .gallery{columns:3} }
+@media (max-width:700px){ .gallery{columns:2} .work .head{grid-template-columns:1fr} }
+
+/* ---------- clients ---------- */
+.clients .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,4vw,60px);align-items:center;padding:clamp(24px,4vw,44px) 0 clamp(46px,6vw,80px)}
+.clients h2{font-size:clamp(28px,3.9vw,48px);font-weight:800;text-transform:uppercase;line-height:1.12}
+.logos{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,26px);margin-top:36px;align-items:center}
+.logos img{
+  width:100%;max-height:62px;object-fit:contain;filter:grayscale(1);opacity:.75;
+  transition:filter .3s ease,opacity .3s ease,transform .3s ease;mix-blend-mode:multiply;
+}
+.logos img:hover{filter:grayscale(0);opacity:1;transform:translateY(-3px)}
+@media (max-width:860px){ .clients .grid{grid-template-columns:1fr} }
+
+/* ---------- contact ---------- */
+.contact{background:var(--paper);position:relative}
+.contact .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,50px);align-items:center;padding:clamp(30px,4vw,50px) 0 clamp(40px,5vw,60px)}
+.contact h2{font-size:clamp(34px,5vw,62px);font-weight:800;text-transform:uppercase;line-height:1.06}
+.contact-list{margin:34px 0 34px;display:flex;flex-direction:column;gap:16px}
+.contact-list a,.contact-list span{display:flex;align-items:center;gap:14px;font-size:clamp(15px,1.4vw,18px)}
+.contact-list img{width:22px;height:22px;object-fit:contain}
+.contact-list a:hover{color:var(--green)}
+.contact .bulb{filter:drop-shadow(0 20px 40px rgba(0,0,0,.18))}
+@media (max-width:860px){ .contact .grid{grid-template-columns:1fr} .contact .bulb{max-width:420px;margin-inline:auto} }
+
+footer{background:#000;color:#8f8f8a;padding:34px 0}
+footer .inner{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
+footer img{height:30px;width:auto}
+footer p{margin:0;font-size:13.5px;letter-spacing:.03em}
+footer a:hover{color:var(--green)}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="nav-logo" href="#top"><img src="assets/logo.png" alt="Crea8Hub"></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#who">Who We Are</a>
+      <a href="#do">What We Do</a>
+      <a href="#services">Services</a>
+      <a href="#think">How We Think</a>
+      <a href="#process">How We Work</a>
+      <a href="#work">The Work</a>
+      <a href="#contact" class="btn nav-cta">Let's Talk</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<!-- 01 HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-copy reveal">
+      <img class="hero-logo" src="assets/logo.png" alt="Crea8Hub logo">
+      <hr class="hr thin" style="margin:0 0 24px">
+      <h1>Ideas That Move<br><span class="green">Businesses Forward</span></h1>
+      <p class="tag">Digital Marketing<br>&amp; Growth Agency</p>
+      <p style="margin-top:34px"><a href="#contact" class="btn">Start a Project</a></p>
+    </div>
+    <div class="hero-img reveal"><img src="assets/hero.webp" alt="Portrait with colour powder"></div>
+  </div>
+</section>
+
+<!-- 02 WHO WE ARE -->
+<section class="who" id="who">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">02</span><span class="rule"></span><span class="eyebrow-label">Who We Are</span></div>
+    <div class="grid">
+      <div class="reveal">
+        <h2>We don't just<br>market brands.<br><span class="green">We build growth.</span></h2>
+        <hr class="hr thin">
+        <p class="lead">We are a digital marketing and growth agency built for ambitious businesses that want more than visibility.</p>
+      </div>
+      <div class="reveal"><img src="assets/collage.webp" alt="Brand collage"></div>
+    </div>
+    <div class="pillars reveal">
+      <span>Strategy</span><span class="x">✕</span>
+      <span>Creativity</span><span class="x">✕</span>
+      <span>Digital</span><span class="x">✕</span>
+      <span>Growth</span>
+    </div>
+  </div>
+</section>
+
+<!-- 05 WHAT WE DO -->
+<section class="dark" id="do">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">05</span><span class="rule"></span><span class="eyebrow-label">What We Do</span></div>
+    <div class="cards">
+      <article class="card reveal"><span class="n">01</span><div class="icon"><img src="assets/ic_strategy.png" alt=""></div><h3>Strategy</h3><p>Brand, marketing and growth strategy.</p></article>
+      <article class="card reveal"><span class="n">02</span><div class="icon"><img src="assets/ic_creative.png" alt=""></div><h3>Creative</h3><p>Campaigns, design, brand storytelling.</p></article>
+      <article class="card reveal"><span class="n">03</span><div class="icon"><img src="assets/ic_content.png" alt=""></div><h3>Content</h3><p>Social media and content that connects.</p></article>
+      <article class="card reveal"><span class="n">04</span><div class="icon"><img src="assets/ic_digital.png" alt=""></div><h3>Digital</h3><p>Performance marketing and digital campaigns.</p></article>
+      <article class="card reveal"><span class="n">05</span><div class="icon"><img src="assets/ic_growth.png" alt=""></div><h3>Growth</h3><p>Ideas and solutions that move business forward.</p></article>
+    </div>
+    <div class="execution">
+      <div class="reveal">
+        <h2>Strategy<br>meets<br><span class="green">Execution.</span></h2>
+        <hr class="hr">
+      </div>
+      <div class="chess reveal"><img src="assets/chess.jpg" alt="Chess board with a green king"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 OUR SERVICES -->
+<section class="services" id="services">
+  <div class="wrap" style="max-width:none;padding:0">
+    <div class="split">
+      <div class="list-col" style="padding-left:max(var(--pad),calc((100vw - var(--maxw))/2 + var(--pad)))">
+        <div class="eyebrow"><span class="num">06</span><span class="rule"></span><span class="eyebrow-label">Our Services</span></div>
+        <h2 style="margin-top:26px">Our<br><span class="green">Services</span></h2>
+        <div class="reveal">
+          <div class="svc"><span class="n">01</span><span class="t">Brand Strategy</span></div>
+          <div class="svc"><span class="n">02</span><span class="t">Marketing Strategy</span></div>
+          <div class="svc"><span class="n">03</span><span class="t">Social Media Management</span></div>
+          <div class="svc"><span class="n">04</span><span class="t">Content Strategy</span></div>
+          <div class="svc"><span class="n">05</span><span class="t">Content Production</span></div>
+          <div class="svc"><span class="n">06</span><span class="t">Creative Campaigns</span></div>
+          <div class="svc"><span class="n">07</span><span class="t">Performance Marketing</span></div>
+          <div class="svc"><span class="n">08</span><span class="t">Influencer Marketing</span></div>
+          <div class="svc"><span class="n">09</span><span class="t">Brand Communications</span></div>
+          <div class="svc"><span class="n">10</span><span class="t">Growth Consulting</span></div>
+        </div>
+      </div>
+      <div class="photo" role="img" aria-label="Video production studio with green screen"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 HOW WE THINK -->
+<section class="think" id="think">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">07</span><span class="rule"></span><span class="eyebrow-label">How We Think</span></div>
+    <div class="grid">
+      <div class="steps reveal">
+        <div class="step"><div class="bubble"><img src="assets/ic_business.png" alt=""></div><div><h4>Your <span class="green">Business</span></h4><p>We understand your business inside and out.</p></div></div>
+        <div class="step"><div class="bubble"><img src="assets/ic_audience.png" alt=""></div><div><h4>Your <span class="green">Audience</span></h4><p>We know who you're talking to and what matters to them.</p></div></div>
+        <div class="step"><div class="bubble"><img src="assets/ic_challenge.png" alt=""></div><div><h4>Your <span class="green">Challenge</span></h4><p>We dig deep to find the real problem to solve.</p></div></div>
+        <div class="step"><div class="bubble"><img src="assets/ic_opportunity.png" alt=""></div><div><h4>Your <span class="green">Opportunity</span></h4><p>We uncover the right opportunity that creates real impact.</p></div></div>
+        <div class="step"><div class="bubble"><img src="assets/ic_strategy2.png" alt=""></div><div><h4>Your <span class="green">Strategy</span></h4><p>We craft a strategy built to win and built for you.</p></div></div>
+      </div>
+      <div class="panel reveal">
+        <h2>No two businesses should get the same <span class="green">solution.</span></h2>
+        <hr class="hr">
+        <p class="lead">We don't start with a service to sell.<br>We start with a problem to solve.</p>
+        <div class="door"><img src="assets/path.jpg" alt="Glowing green path leading to an open door"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 HOW WE WORK -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">08</span><span class="rule"></span><span class="eyebrow-label">How We Work</span></div>
+    <div class="top">
+      <div class="reveal">
+        <h2>Our Process<br><span class="green">Your Growth.</span></h2>
+        <hr class="hr">
+        <p class="lead">A clear process, collaborative by design, built to deliver real impact.</p>
+      </div>
+      <div class="reveal"><img src="assets/team.webp" alt="Crea8Hub team in a working session"></div>
+    </div>
+    <div class="flow">
+      <div class="node reveal"><div class="circle"><img src="assets/ic_understand.png" alt=""></div><div class="txt"><span class="n">01</span><h4>Understand</h4><p>We learn about your business, market and audience.</p></div></div>
+      <div class="node reveal"><div class="circle"><img src="assets/ic_strategise.png" alt=""></div><div class="txt"><span class="n">02</span><h4>Strategise</h4><p>We identify opportunities and create the roadmap.</p></div></div>
+      <div class="node reveal"><div class="circle"><img src="assets/ic_create.png" alt=""></div><div class="txt"><span class="n">03</span><h4>Create</h4><p>We turn insights into powerful ideas and content.</p></div></div>
+      <div class="node reveal"><div class="circle"><img src="assets/ic_execute.png" alt=""></div><div class="txt"><span class="n">04</span><h4>Execute</h4><p>We bring the strategy to life across the right channels.</p></div></div>
+      <div class="node reveal"><div class="circle"><img src="assets/ic_optimise.png" alt=""></div><div class="txt"><span class="n">05</span><h4>Optimise</h4><p>We measure, learn and improve for better results.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 THE WORK -->
+<section class="work" id="work">
+  <img class="brush" src="assets/brush.webp" alt="">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">10</span><span class="rule"></span><span class="eyebrow-label">The Work</span></div>
+    <div class="head">
+      <div class="reveal">
+        <h2>Ideas in<br><span class="green">Action.</span></h2>
+        <hr class="hr">
+      </div>
+      <p class="lead reveal">A cross section of campaigns we worked on — for brands across finance, telecoms, FMCG and public sector.</p>
+    </div>
+    <div class="frame reveal">
+      <div class="gallery">
+        <figure><img loading="lazy" src="assets/w1.jpg" alt="Campaign still"></figure>
+        <figure><img loading="lazy" src="assets/w8.jpg" alt="Campaign still"></figure>
+        <figure><img loading="lazy" src="assets/w5.jpg" alt="Campaign still"></figure>
+        <figure><img loading="lazy" src="assets/w12.jpg" alt="Campaign still"></figure>
+        <figure><img loading="lazy" src="assets/w2.jpg" alt="Campaign still"></figure>
+        <figure><img loading="lazy" src="assets/w9.jpg" alt="Campaign still"></figure>
+        <figure><img loading="lazy" src="assets/w6.jpg" alt="Campaign still"></figure>
+        <figure><img loading="lazy" src="assets/w13.jpg" alt="Campaign still"></figure>
+        <figure><img loading="lazy" src="assets/w3.jpg" alt="Campaign still"></figure>
+        <figure><img loading="lazy" src="assets/w10.jpg" alt="Campaign still"></figure>
+        <figure><img loading="lazy" src="assets/w15.jpg" alt="Campaign still"></figure>
+        <figure><img loading="lazy" src="assets/w4.jpg" alt="Campaign still"></figure>
+        <figure><img loading="lazy" src="assets/w14.jpg" alt="Campaign still"></figure>
+        <figure><img loading="lazy" src="assets/w7.jpg" alt="Campaign still"></figure>
+        <figure><img loading="lazy" src="assets/w11.jpg" alt="Campaign still"></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 CLIENTS -->
+<section class="clients" id="clients">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">12</span><span class="rule"></span><span class="eyebrow-label">Who We Work With</span></div>
+    <div class="grid">
+      <div class="reveal">
+        <h2>We've worked with ambitious brands <span class="green">across industries.</span></h2>
+        <hr class="hr thin">
+        <div class="logos">
+          <img loading="lazy" src="assets/logo_bat.png" alt="BAT Nigeria">
+          <img loading="lazy" src="assets/logo_palmpay.png" alt="PalmPay">
+          <img loading="lazy" src="assets/logo_dkk.png" alt="DKK">
+          <img loading="lazy" src="assets/logo_opay.png" alt="OPay">
+          <img loading="lazy" src="assets/logo_stanbic.png" alt="Stanbic IBTC Pension Managers">
+          <img loading="lazy" src="assets/logo_diplomat.png" alt="Diplomat Oral Care">
+          <img loading="lazy" src="assets/logo_metropolitan.png" alt="Metropolitan">
+          <img loading="lazy" src="assets/logo_snapnet.png" alt="Snapnet">
+        </div>
+      </div>
+      <div class="reveal"><img loading="lazy" src="assets/handshake.webp" alt="Handshake collage"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 14 CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">14</span><span class="rule"></span><span class="eyebrow-label">Let's Build Something Great</span></div>
+    <div class="grid">
+      <div class="reveal">
+        <h2>Let's<br>create <span class="green">impact</span><br>together.</h2>
+        <hr class="hr">
+        <div class="contact-list">
+          <a href="https://www.crea8hub.com" target="_blank" rel="noopener"><img src="assets/ic_web.png" alt="">www.crea8hub.com</a>
+          <a href="tel:+2348060599741"><img src="assets/ic_phone.png" alt="">08060599741</a>
+          <span><img src="assets/ic_pin.png" alt="">Lagos, Nigeria</span>
+        </div>
+        <a href="mailto:hello@crea8hub.com" class="btn">Start a Project</a>
+      </div>
+      <div class="reveal"><img class="bulb" loading="lazy" src="assets/bulb.webp" alt="Hand holding a lit bulb"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap inner">
+    <img src="assets/logo.png" alt="Crea8Hub">
+    <p>Ideas that move businesses forward · Lagos, Nigeria</p>
+    <p><a href="https://www.crea8hub.com" target="_blank" rel="noopener">www.crea8hub.com</a> · <a href="tel:+2348060599741">08060599741</a></p>
+  </div>
+</footer>
+
+<script>
+  var t = document.getElementById('navToggle'), l = document.getElementById('navLinks');
+  t.addEventListener('click', function(){ l.classList.toggle('open'); });
+  l.addEventListener('click', function(e){ if(e.target.tagName === 'A') l.classList.remove('open'); });
+
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>
