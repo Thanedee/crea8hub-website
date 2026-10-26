@@ -193,6 +193,7 @@ header.nav{
 .apps-menu .ic{width:40px;height:40px;border-radius:10px;background:#1a1a1a;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center}
 .apps-menu .ic svg{width:22px;height:22px}
 .apps-menu b{display:block;font-family:var(--head);font-weight:700;font-size:14.5px;line-height:1.25}
+.nav-links .apps-menu a.apps-all{display:block;margin-top:6px;border-top:1px solid rgba(255,255,255,.1);border-radius:0;padding:12px;font-family:var(--head);font-weight:700;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:#cfcfc9}
 .apps-menu small{display:block;color:#a9a9a3;font-size:12.5px;line-height:1.35;margin-top:2px}
 @media (max-width:900px){
   .nav-apps{width:100%;border-bottom:1px solid rgba(255,255,255,.07)}
@@ -397,10 +398,11 @@ footer a:hover{color:var(--green)}
         <button class="nav-apps-btn" id="navAppsBtn" aria-expanded="false" aria-controls="appsMenu">Apps <span class="new">Free</span><svg viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
         <div class="apps-menu" id="appsMenu">
           <div class="label">Free tools from Crea8Hub</div>
-          <a href="https://budget.crea8hub.com/"><span class="ic"><span style="font:800 20px/1 Raleway,Arial,sans-serif;color:#84C226">₦</span></span><span><b>Ad Budget Calculator</b><small>See what your naira can buy on Meta, Google and TikTok</small></span></a>
-          <a href="https://audit.crea8hub.com/"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#84C226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span><span><b>Brand Health Check</b><small>Score your brand in 2 minutes and see what to fix first</small></span></a>
-          <a href="https://calendar.crea8hub.com/"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#84C226" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><rect x="7" y="13" width="3" height="3" fill="#84C226" stroke="none"/></svg></span><span><b>Campaign Calendar</b><small>Every key marketing date in Nigeria for 2027</small></span></a>
-          <a href="https://arcon.crea8hub.com/"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#84C226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.6 2.6L16.5 9"/></svg></span><span><b>ARCON Approval Guide</b><small>Get your adverts approved, step by step</small></span></a>
+          <a href="/apps/budget-calculator/"><span class="ic"><span style="font:800 20px/1 Raleway,Arial,sans-serif;color:#84C226">₦</span></span><span><b>Ad Budget Calculator</b><small>See what your naira can buy on Meta, Google and TikTok</small></span></a>
+          <a href="/apps/brand-health-check/"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#84C226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span><span><b>Brand Health Check</b><small>Score your brand in 2 minutes and see what to fix first</small></span></a>
+          <a href="/apps/campaign-calendar/"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#84C226" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><rect x="7" y="13" width="3" height="3" fill="#84C226" stroke="none"/></svg></span><span><b>Campaign Calendar</b><small>Every key marketing date in Nigeria for 2027</small></span></a>
+          <a href="/apps/arcon-approval-guide/"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#84C226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.6 2.6L16.5 9"/></svg></span><span><b>ARCON Approval Guide</b><small>Get your adverts approved, step by step</small></span></a>
+          <a class="apps-all" href="/apps/">See all free tools &rarr;</a>
         </div>
       </div>
       <a href="#contact" class="btn nav-cta">Let's Talk</a>
