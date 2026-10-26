@@ -173,6 +173,36 @@ header.nav{
   .nav-toggle{display:block}
 }
 
+/* ---------- apps menu ---------- */
+.nav-apps{position:relative}
+.nav-apps-btn{display:inline-flex;align-items:center;gap:6px;background:none;border:0;cursor:pointer;padding:0;
+  font-family:var(--head);font-weight:600;font-size:12.5px;letter-spacing:.11em;text-transform:uppercase;color:#e9e9e6;opacity:.85;transition:color .2s,opacity .2s}
+.nav-apps-btn:hover,.nav-apps-btn[aria-expanded="true"]{color:var(--green);opacity:1}
+.nav-apps-btn .new{font-size:9px;letter-spacing:.08em;background:var(--green);color:#000;border-radius:99px;padding:2px 6px;font-weight:800}
+.nav-apps-btn svg{width:10px;height:10px;transition:transform .2s}
+.nav-apps-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
+.apps-menu{position:absolute;top:calc(100% + 22px);right:-40px;width:min(420px,92vw);background:#0b0b0b;border:1px solid rgba(255,255,255,.12);
+  border-radius:14px;padding:10px;box-shadow:0 24px 60px rgba(0,0,0,.6);display:none;z-index:70}
+.apps-menu::before{content:"";position:absolute;top:-22px;left:0;right:0;height:22px}
+.nav-apps.open .apps-menu{display:block}
+@media (hover:hover) and (min-width:901px){.nav-apps:hover .apps-menu{display:block}}
+.apps-menu .label{font-family:var(--head);font-weight:700;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--green);padding:8px 12px 6px}
+.nav-links .apps-menu a{display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:center;padding:10px 12px;border-radius:10px;
+  text-transform:none;letter-spacing:0;font-family:var(--body);font-size:14px;opacity:1;color:#fff;border-bottom:0;width:auto}
+.nav-links .apps-menu a:hover{background:rgba(132,194,38,.1);color:#fff}
+.apps-menu .ic{width:40px;height:40px;border-radius:10px;background:#1a1a1a;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center}
+.apps-menu .ic svg{width:22px;height:22px}
+.apps-menu b{display:block;font-family:var(--head);font-weight:700;font-size:14.5px;line-height:1.25}
+.apps-menu small{display:block;color:#a9a9a3;font-size:12.5px;line-height:1.35;margin-top:2px}
+@media (max-width:900px){
+  .nav-apps{width:100%;border-bottom:1px solid rgba(255,255,255,.07)}
+  .nav-apps-btn{width:100%;justify-content:flex-start;padding:13px 0;font-size:14px}
+  .apps-menu{position:static;width:100%;box-shadow:none;border:0;background:transparent;padding:0 0 10px;border-radius:0}
+  .apps-menu::before{display:none}
+  .apps-menu .label{display:none}
+  .nav-links .apps-menu a{padding:10px 0}
+}
+
 /* ---------- hero ---------- */
 .hero{background:var(--black);color:#fff;min-height:min(92vh,860px);display:flex;align-items:center;padding:clamp(40px,7vw,80px) 0}
 .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(20px,4vw,60px);align-items:center}
@@ -363,6 +393,16 @@ footer a:hover{color:var(--green)}
       <a href="#think">How We Think</a>
       <a href="#process">How We Work</a>
       <a href="#work">The Work</a>
+      <div class="nav-apps" id="navApps">
+        <button class="nav-apps-btn" id="navAppsBtn" aria-expanded="false" aria-controls="appsMenu">Apps <span class="new">Free</span><svg viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+        <div class="apps-menu" id="appsMenu">
+          <div class="label">Free tools from Crea8Hub</div>
+          <a href="https://budget.crea8hub.com/"><span class="ic"><span style="font:800 20px/1 Raleway,Arial,sans-serif;color:#84C226">₦</span></span><span><b>Ad Budget Calculator</b><small>See what your naira can buy on Meta, Google and TikTok</small></span></a>
+          <a href="https://audit.crea8hub.com/"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#84C226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span><span><b>Brand Health Check</b><small>Score your brand in 2 minutes and see what to fix first</small></span></a>
+          <a href="https://calendar.crea8hub.com/"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#84C226" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><rect x="7" y="13" width="3" height="3" fill="#84C226" stroke="none"/></svg></span><span><b>Campaign Calendar</b><small>Every key marketing date in Nigeria for 2027</small></span></a>
+          <a href="https://arcon.crea8hub.com/"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#84C226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.6 2.6L16.5 9"/></svg></span><span><b>ARCON Approval Guide</b><small>Get your adverts approved, step by step</small></span></a>
+        </div>
+      </div>
       <a href="#contact" class="btn nav-cta">Let's Talk</a>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
@@ -598,6 +638,15 @@ footer a:hover{color:var(--green)}
     entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
   }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  (function(){
+    var w=document.getElementById('navApps'), b=document.getElementById('navAppsBtn');
+    if(!w||!b) return;
+    function set(o){ w.classList.toggle('open',o); b.setAttribute('aria-expanded',o?'true':'false'); }
+    b.addEventListener('click',function(e){ e.stopPropagation(); set(!w.classList.contains('open')); });
+    document.addEventListener('click',function(e){ if(!w.contains(e.target)) set(false); });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ set(false); b.focus(); } });
+  })();
 </script>
 </body>
 </html>
