@@ -46,7 +46,7 @@
   </url>
   <url>
     <loc>https://www.crea8hub.com/apps/</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://www.crea8hub.com/apps/og.png</image:loc></image:image>
@@ -78,5 +78,19 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://www.crea8hub.com/apps/arcon-approval-guide/og.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.crea8hub.com/apps/whatsapp-link-generator/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://www.crea8hub.com/apps/whatsapp-link-generator/og.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.crea8hub.com/apps/social-media-image-sizes/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://www.crea8hub.com/apps/social-media-image-sizes/og.png</image:loc></image:image>
   </url>
 </urlset>
