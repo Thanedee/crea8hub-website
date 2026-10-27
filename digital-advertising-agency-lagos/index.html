@@ -527,30 +527,23 @@ footer a:hover{color:var(--green)}
 @media (max-width:560px){.related{grid-template-columns:1fr}}
 .nav-links a.current{color:var(--green);opacity:1}
 </style>
+<link rel="stylesheet" href="/assets/site-nav.css">
 </head>
 <body>
 
-<header class="nav">
-  <div class="wrap nav-inner">
-    <a class="nav-logo" href="/"><img src="../assets/logo.png" alt="Crea8Hub home"></a>
-    <nav class="nav-links" id="navLinks" aria-label="Services">
-      <a href="/social-media-marketing-agency-lagos/">Social Media</a><a href="/branding-agency-lagos/">Branding</a><a href="/video-production-company-lagos/">Video</a><a href="/digital-advertising-agency-lagos/" class="current" aria-current="page">Ads</a><a href="/influencer-marketing-agency-nigeria/">Influencers</a><a href="/fintech-marketing-agency-nigeria/">Fintech</a>
-      <div class="nav-apps" id="navApps">
-        <button class="nav-apps-btn" id="navAppsBtn" aria-expanded="false" aria-controls="appsMenu">Apps <span class="new">Free</span><svg viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
-        <div class="apps-menu" id="appsMenu">
-          <div class="label">Free tools from Crea8Hub</div>
-          <a href="/apps/budget-calculator/"><span class="ic"><span style="font:800 20px/1 Raleway,Arial,sans-serif;color:#84C226">₦</span></span><span><b>Ad Budget Calculator</b><small>See what your naira can buy on Meta, Google and TikTok</small></span></a>
-          <a href="/apps/brand-health-check/"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#84C226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span><span><b>Brand Health Check</b><small>Score your brand in 2 minutes and see what to fix first</small></span></a>
-          <a href="/apps/campaign-calendar/"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#84C226" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><rect x="7" y="13" width="3" height="3" fill="#84C226" stroke="none"/></svg></span><span><b>Campaign Calendar</b><small>Every key marketing date in Nigeria for 2027</small></span></a>
-          <a href="/apps/arcon-approval-guide/"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#84C226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.6 2.6L16.5 9"/></svg></span><span><b>ARCON Approval Guide</b><small>Get your adverts approved, step by step</small></span></a>
-          <a href="/apps/social-media-image-sizes/"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#84C226" stroke-width="2" stroke-linecap="round"><path d="M6 2v16h16"/><path d="M2 6h16v16"/></svg></span><span><b>Social Media Image Sizes</b><small>Every 2027 post size, plus a free image resizer</small></span></a>
-          <a href="/apps/content-plan-generator/"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#84C226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/><path d="M7 15l2 2 3.5-3.5"/><path d="M15 14.5h3M15 17h2" stroke-width="1.6"/></svg></span><span><b>30-Day Content Plan</b><small>A month of post ideas built around key dates</small></span></a>
-          <a class="apps-all" href="/apps/">See all free tools &rarr;</a>
-        </div>
-      </div>
-      <a href="#contact" class="btn nav-cta">Let's Talk</a>
+<header class="sn" id="top-nav">
+  <div class="sn-in">
+    <a class="sn-logo" href="/" aria-label="Crea8Hub home"><img src="/assets/logo.png" alt="Crea8Hub" width="116" height="30"></a>
+    <button class="sn-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="snLinks"><span></span></button>
+    <nav class="sn-links" id="snLinks" aria-label="Main">
+      <div class="sn-dd cur"><button type="button" aria-expanded="false">Services <svg viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+        <div class="sn-menu"><div class="sn-label">What we do</div><a href="/social-media-marketing-agency-lagos/"><span class="sn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#84C226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></span><span><b>Social Media Marketing</b><small>Strategy, content and community management</small></span></a><a href="/branding-agency-lagos/"><span class="sn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#84C226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4.5 2 7.5L12 16.5 5.5 21l2-7.5L2 9h7z"/></svg></span><span><b>Branding</b><small>Brand strategy, identity and guidelines</small></span></a><a href="/video-production-company-lagos/"><span class="sn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#84C226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3"/></svg></span><span><b>Video Production</b><small>Adverts, brand films and social video</small></span></a><a href="/digital-advertising-agency-lagos/" aria-current="page"><span class="sn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#84C226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="#84C226"/></svg></span><span><b>Google &amp; Meta Ads<em>You are here</em></b><small>Paid campaigns that bring in leads</small></span></a><a href="/influencer-marketing-agency-nigeria/"><span class="sn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#84C226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></span><span><b>Influencer Marketing</b><small>Creator campaigns across Nigeria</small></span></a><a href="/fintech-marketing-agency-nigeria/"><span class="sn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#84C226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><span><b>Fintech Marketing</b><small>Growth marketing for fintech brands</small></span></a><a class="sn-all" href="/#services">All services &rarr;</a></div></div>
+      <a class="sn-link" href="/#work">Our work</a>
+      <a class="sn-link" href="/#who">About</a>
+      <div class="sn-dd"><button type="button" aria-expanded="false">Free tools <span class="sn-free">Free</span><svg viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+        <div class="sn-menu"><div class="sn-label">Free tools from Crea8Hub</div><a href="/apps/budget-calculator/"><span class="sn-ic"><span style="font:800 20px/1 Raleway,Arial,sans-serif;color:#84C226">₦</span></span><span><b>Ad Budget Calculator</b><small>See what your naira can buy on Meta, Google and TikTok</small></span></a><a href="/apps/brand-health-check/"><span class="sn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#84C226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span><span><b>Brand Health Check</b><small>Score your brand in 2 minutes and see what to fix first</small></span></a><a href="/apps/campaign-calendar/"><span class="sn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#84C226" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><rect x="7" y="13" width="3" height="3" fill="#84C226" stroke="none"/></svg></span><span><b>Campaign Calendar</b><small>Every key marketing date in Nigeria for 2027</small></span></a><a href="/apps/arcon-approval-guide/"><span class="sn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#84C226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.6 2.6L16.5 9"/></svg></span><span><b>ARCON Approval Guide</b><small>Get your adverts approved, step by step</small></span></a><a href="/apps/social-media-image-sizes/"><span class="sn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#84C226" stroke-width="2" stroke-linecap="round"><path d="M6 2v16h16"/><path d="M2 6h16v16"/></svg></span><span><b>Social Media Image Sizes</b><small>Every 2027 post size, plus a free image resizer</small></span></a><a href="/apps/content-plan-generator/"><span class="sn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#84C226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/><path d="M7 15l2 2 3.5-3.5"/><path d="M15 14.5h3M15 17h2" stroke-width="1.6"/></svg></span><span><b>30-Day Content Plan</b><small>A month of post ideas built around key dates</small></span></a><a class="sn-all" href="/apps/">See all free tools &rarr;</a></div></div>
+      <a class="sn-cta" href="/#contact">Let's talk</a>
     </nav>
-    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
   </div>
 </header>
 
@@ -662,20 +655,6 @@ footer a:hover{color:var(--green)}
   <span>Chat on WhatsApp</span>
 </a>
 
-<script>
-  var t=document.getElementById('navToggle'),l=document.getElementById('navLinks');
-  t.addEventListener('click',function(){l.classList.toggle('open');});
-  l.addEventListener('click',function(e){if(e.target.tagName==='A')l.classList.remove('open');});
-</script>
-<script>
-  (function(){
-    var w=document.getElementById('navApps'), b=document.getElementById('navAppsBtn');
-    if(!w||!b) return;
-    function set(o){ w.classList.toggle('open',o); b.setAttribute('aria-expanded',o?'true':'false'); }
-    b.addEventListener('click',function(e){ e.stopPropagation(); set(!w.classList.contains('open')); });
-    document.addEventListener('click',function(e){ if(!w.contains(e.target)) set(false); });
-    document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ set(false); b.focus(); } });
-  })();
-</script>
+<script src="/assets/site-nav.js"></script>
 </body>
 </html>
