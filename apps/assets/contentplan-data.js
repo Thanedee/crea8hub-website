@@ -59,6 +59,62 @@ window.CP_DATA = {
         ]
       }
     },
+    sports: {
+      label: "Sports & fitness", product: "our programme", loc: "#Lagos",
+      tags: ["#NaijaFitness", "#LagosFitness", "#FitFam", "#NaijaSports", "#SuperEagles", "#GymLife"],
+      ideas: {
+        educate: [
+          "Three warm-up moves that prevent most injuries|Show each move slowly and say why it matters. Keep it under 30 seconds.|r",
+          "How to train in Lagos heat without overdoing it|Timing, water and the warning signs to stop. Practical, not preachy.|c",
+          "Myth vs fact: 'no pain, no gain'|Clear up three common training myths, one slide each.|c",
+          "What to eat before a match or workout, Naija edition|Simple local options and when to eat them. Avoid medical claims.|c",
+          "How to choose the right running shoes|Fit, grip and what matters for road vs pitch. Show the checks in-store.|r",
+          "Price breakdown: what a month of {product} gets you|Sessions, coaching and extras, priced in naira. No hidden costs.|c"
+        ],
+        inspire: [
+          "Why we started {business}|The story behind your gym, academy or brand, in your own words.|r",
+          "Member transformation, in their words|A real member's journey, shared with permission. Focus on how they feel, not just how they look.|r",
+          "The coach behind the results|Introduce a coach, their background and their training philosophy.|r",
+          "From the streets to the pitch|Feature a young player you support and what football means to them.|r",
+          "Our promise to every beginner|State plainly how you welcome people who are just starting out.|i"
+        ],
+        entertain: [
+          "Predict the score: Super Eagles edition|Ask followers to predict the next match score. Shout out whoever gets it right.|p",
+          "Types of people at the gym|A light, relatable carousel: the selfie champion, the 5am warrior and the one who only does arms.|c",
+          "This or that: morning run or evening run?|A quick poll for easy engagement.|p",
+          "Rate this five-a-side goal|Share a great goal from your community and ask for ratings.|r",
+          "Things coaches hear every January|A light skit about new-year resolutions.|r"
+        ],
+        promote: [
+          "{product} in 30 seconds|Show what a session looks like, who it's for and how to join.|r",
+          "Book a free trial session this week|Explain how to book and what to bring. Make it easy to say yes.|s",
+          "Three ways {product} fits a busy schedule|Early, lunchtime and evening options, or home workouts.|c",
+          "Kit check: what's new this month|Show new kit or merchandise, with prices in naira.|c",
+          "Got questions about {product}? Ask us on WhatsApp|Invite questions and say when they can expect a reply.|s"
+        ],
+        community: [
+          "What's your fitness goal for this month?|Ask, reply to every comment and share common goals next week.|p",
+          "Tag your workout partner|A simple prompt that brings friends into the conversation.|i",
+          "Weekend community run or match: who's in?|Share the time, place and how to join. Post photos after.|t",
+          "Share your progress photo and we'll feature the best|With permission, repost member progress and cheer them on.|t",
+          "Ask our coach anything|Open a question box and answer in a follow-up video.|s"
+        ],
+        bts: [
+          "A day in the life of our coach|From the 5am session to the last class of the day.|r",
+          "How we set up for match day|Kit, pitch, warm-ups and team talk, in 60 seconds.|r",
+          "Cleaning and kit check: how we keep the space safe|Show the routine members don't usually see.|r",
+          "How we plan a training programme|Whiteboard, goals and adjustments, explained simply.|c",
+          "Meet the team behind the front desk|Introduce the people who welcome members every day.|r"
+        ],
+        proof: [
+          "What members say about {product}|Share three short reviews, with permission.|c",
+          "Member story: six months on|A real member's progress, shared with consent. Be honest about the effort involved.|r",
+          "Our academy players who moved up|Celebrate players who earned trials, scholarships or call-ups, with permission.|c",
+          "Your reviews, answered|Respond openly to one positive and one critical review.|c",
+          "Numbers we're proud of this year|Real, checkable figures, such as sessions run or members trained. No inflated claims.|i"
+        ]
+      }
+    },
     retail: {
       label: "Retail & e-commerce", product: "our best-seller", loc: "#Nigeria",
       tags: ["#ShopOnline", "#ShopSmall", "#NaijaBusiness", "#ShopLocal", "#OnlineShoppingNigeria", "#Lagos"],

@@ -72,7 +72,11 @@
     "Children's Day": "#ChildrensDay", "Good Friday": "#GoodFriday", "Easter Sunday": "#Easter", "Easter Monday": "#Easter",
     "Lagos Fashion Week 2026": "#LagosFashionWeek", "Lagos Fashion Week 2027": "#LagosFashionWeek", "Carnival Calabar": "#CarnivalCalabar",
     "AFCON 2027": "#AFCON2027", "World Mental Health Day": "#WorldMentalHealthDay", "Customer Service Week": "#CustomerServiceWeek",
-    "Breast Cancer Awareness Month": "#BreastCancerAwareness", "Cybersecurity Awareness Month": "#CybersecurityAwarenessMonth"
+    "Breast Cancer Awareness Month": "#BreastCancerAwareness", "Cybersecurity Awareness Month": "#CybersecurityAwarenessMonth",
+    "World Malaria Day": "#WorldMalariaDay", "World AIDS Day": "#WorldAIDSDay", "World Cancer Day": "#WorldCancerDay", "World Diabetes Day": "#WorldDiabetesDay",
+    "Safer Internet Day": "#SaferInternetDay", "World Consumer Rights Day": "#WorldConsumerRightsDay", "World Social Media Day": "#SocialMediaDay",
+    "Fashion Revolution Week": "#WhoMadeMyClothes", "World Afro Day": "#WorldAfroDay", "World Football Day": "#WorldFootballDay",
+    "FIFA Women's World Cup 2027": "#FIFAWWC", "International Day of Yoga": "#YogaDay", "Earth Day": "#EarthDay", "World Teachers' Day": "#WorldTeachersDay"
   };
   var GREET = {
     "Christmas Day": "Merry Christmas from {us}", "Boxing Day": "Happy Boxing Day, and thank you for this year",
@@ -84,20 +88,21 @@
   };
   var BIG = /^(Black Friday|Christmas Day|Valentine's Day|Eid-el-Fitr|Eid-el-Kabir|Mother's Day|Father's Day)/;
   var IND_RE = {
-    fintech: /Fraud|Savings|Money|Entrepreneurship|MSME|Investor|Cybersecurity|Information Literacy/,
-    retail: /Entrepreneurship|MSME|Environment|Fraud/,
-    food: /Health Day|Environment|Water|NCDs|MSME/,
-    beauty: /Breast Cancer|Environment|MSME/,
-    health: /Health|AMR|Immunization|NCDs|Breast|Deaf|Water/,
-    realestate: /Environment|Water|Entrepreneurship/,
-    education: /Book|Science|Literacy|Money|Youth|Girl|Space|Deaf/,
-    tech: /Cybersecurity|Science|Space|Entrepreneurship|Literacy|Fraud/,
-    professional: /Entrepreneurship|MSME|Fraud|Investor|Literacy/,
-    events: /Youth|Volunteer|Mental Health/,
-    fmcg: /Environment|Water|Health Day|NCDs|Breastfeeding|MSME/,
-    ngo: /Volunteer|Water|Girl|Environment|Health|Immunization|Deaf|Youth|Book|Literacy/
+    fintech: /Fraud|Savings|Money|Entrepreneur|MSME|Investor|Cybersecurity|Information Literacy|Consumer Rights|Data Privacy|Safer Internet|Remittances|Banks|Cooperatives/,
+    retail: /Entrepreneur|MSME|Environment|Fraud|Consumer Rights|Zero Waste|Earth Day|Photography/,
+    food: /Health Day|Environment|Water|NCDs|MSME|Food Day|Coffee|Diabetes|Zero Waste/,
+    beauty: /Breast Cancer|Environment|MSME|Afro|Cotton|Fashion Revolution|Zero Waste|Earth Day|Photography|Women's Entrepreneurship/,
+    health: /Health|AMR|Immunization|NCDs|Breast|Deaf|Water|Malaria|AIDS|Cancer|Diabetes|Blood Donor|Older Persons|Disabilities/,
+    realestate: /Environment|Water|Entrepreneur|Earth Day/,
+    education: /Book|Science|Literacy|Money|Youth|Girl|Space|Deaf|Teachers|Safer Internet/,
+    tech: /Cybersecurity|Science|Space|Entrepreneur|Literacy|Fraud|Safer Internet|Data Privacy/,
+    professional: /Entrepreneur|MSME|Fraud|Investor|Literacy|Consumer Rights|Data Privacy/,
+    events: /Youth|Volunteer|Mental Health|Tourism|Photography/,
+    fmcg: /Environment|Water|Health Day|NCDs|Breastfeeding|MSME|Food Day|Earth Day|Malaria/,
+    ngo: /Volunteer|Water|Girl|Environment|Health|Immunization|Deaf|Youth|Book|Literacy|Malaria|AIDS|Human Rights|Disabilities|Older Persons|Blood Donor|Kindness|Food Day/,
+    sports: /Mental Health|Youth|Diabetes|NCDs|Health Day/
   };
-  var GENERAL_RE = /Women's Day|Men's Day|Customer Service|Children's Day|World Mental Health Day|Youth Day/;
+  var GENERAL_RE = /Women's Day|Men's Day|Customer Service|Children's Day|World Mental Health Day|Youth Day|Social Media Day|Emoji Day/;
   var SCHOOL_RE = /school|mid-term|vacation/i;
 
   /* ---------- helpers ---------- */
@@ -156,7 +161,7 @@
       return ind === "fintech" && /resume|Back-to-school/.test(ev.name);
     }
     if (ev.type === "cultural") return /^(beauty|events|food|retail|fmcg)$/.test(ind);
-    if (ev.type === "sports") return /^(food|events|fmcg|retail|tech)$/.test(ind);
+    if (ev.type === "sports") return /^(sports|fintech|food|events|fmcg|retail|tech)$/.test(ind);
     if (ev.type === "awareness") return IND_RE[ind].test(ev.name) || GENERAL_RE.test(ev.name);
     return false;
   }
