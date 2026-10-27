@@ -69,3 +69,6 @@ html{scroll-padding-top:84px}
 .nl-nudge a{flex:none;font-family:'Raleway',"Helvetica Neue",Arial,sans-serif;font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:#0a0a0a;background:#84C226;border-radius:999px;padding:13px 22px}
 .nl-nudge a:hover{background:#C3D92B}
 @media print{.nl-nudge{display:none!important}}
+/* Paired call-to-action buttons (WhatsApp + booking) */
+.cta-pair{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.cta-band .cta-pair{justify-content:center}
