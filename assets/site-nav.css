@@ -62,3 +62,10 @@ html{scroll-padding-top:84px}
 .nlb-note a{color:#b9b9b4}
 @media (max-width:820px){.nlb-in{grid-template-columns:1fr}}
 @media print{.nlb{display:none!important}}
+/* In-tool newsletter prompt */
+.nl-nudge{display:flex;align-items:center;justify-content:space-between;gap:18px 28px;flex-wrap:wrap;background:#000;color:#fff;border-radius:16px;border-left:4px solid #84C226;padding:20px 24px;margin:28px 0;font-family:'Lato',"Helvetica Neue",Arial,sans-serif}
+.nl-nudge b{display:block;font-family:'Raleway',"Helvetica Neue",Arial,sans-serif;font-weight:800;font-size:18px;line-height:1.25;color:#fff;margin:0 0 4px}
+.nl-nudge span{display:block;color:#cfcfc9;font-size:15px;line-height:1.5;max-width:56ch}
+.nl-nudge a{flex:none;font-family:'Raleway',"Helvetica Neue",Arial,sans-serif;font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:#0a0a0a;background:#84C226;border-radius:999px;padding:13px 22px}
+.nl-nudge a:hover{background:#C3D92B}
+@media print{.nl-nudge{display:none!important}}
