@@ -99,4 +99,11 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://www.crea8hub.com/newsletter/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image><image:loc>https://www.crea8hub.com/newsletter/sample-november-2026.jpg</image:loc></image:image>
+  </url>
 </urlset>
