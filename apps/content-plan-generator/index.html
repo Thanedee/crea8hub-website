@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html lang="en-NG">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7112L7QDDS"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-7112L7QDDS');
+(function(){
+function ev(n,p){try{gtag('event',n,p||{});}catch(e){}}
+document.addEventListener('click',function(e){
+var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'';var t=(a.innerText||'').trim().slice(0,80);
+if(/wa\.me|api\.whatsapp\.com/.test(h))ev('whatsapp_click',{link_text:t,page_path:location.pathname});
+else if(/zohobookings\.com/.test(h))ev('book_call_click',{link_text:t,page_path:location.pathname});
+else if(h.indexOf('mailto:')===0)ev('email_click',{page_path:location.pathname});
+else if(h.indexOf('tel:')===0)ev('phone_click',{page_path:location.pathname});
+},true);
+document.addEventListener('submit',function(e){var f=e.target;ev('form_submit',{form_id:f.id||f.getAttribute('name')||'form',page_path:location.pathname});},true);
+var m=location.pathname.match(/^\/apps\/([^\/]+)\//);if(m){var used=false;var u=function(e){if(used)return;var x=e.target;if(!x.closest||x.closest('header,nav,footer,.sn'))return;if(e.type==='click'&&!x.closest('button,input,select,label,[role=button]'))return;used=true;ev('tool_used',{tool_name:m[1]});};document.addEventListener('click',u,true);document.addEventListener('change',u,true);}
+})();
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Free 30-Day Content Plan Generator | Crea8Hub</title>
