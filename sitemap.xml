@@ -106,4 +106,18 @@
     <priority>0.6</priority>
     <image:image><image:loc>https://www.crea8hub.com/newsletter/sample-november-2026.jpg</image:loc></image:image>
   </url>
+  <url>
+    <loc>https://www.crea8hub.com/blog/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://www.crea8hub.com/blog/og.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.crea8hub.com/blog/nigeria-marketing-statistics-2026/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://www.crea8hub.com/blog/nigeria-marketing-statistics-2026/og.png</image:loc></image:image>
+  </url>
 </urlset>
