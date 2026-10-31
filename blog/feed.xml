@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>The Crea8Hub blog</title>
+<link>https://www.crea8hub.com/blog/</link>
+<atom:link href="https://www.crea8hub.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
+<description>Research, how-to guides and practical marketing advice for Nigerian brands, from the latest numbers to getting your adverts approved by ARCON.</description>
+<language>en-ng</language>
+<item>
+<title>Nigerian marketing in 2026: the numbers that matter</title>
+<link>https://www.crea8hub.com/blog/nigeria-marketing-statistics-2026/</link>
+<guid>https://www.crea8hub.com/blog/nigeria-marketing-statistics-2026/</guid>
+<pubDate>Sat, 31 Oct 2026 08:00:00 +0100</pubDate>
+<description>TikTok reach up 43%, 130M Nigerians offline, 61% trust influencers over ads, and ARCON now covers social media. The 2026 data and what it means for 2027.</description>
+</item>
+</channel>
+</rss>
