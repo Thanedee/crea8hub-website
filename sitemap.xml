@@ -120,4 +120,10 @@
     <priority>0.8</priority>
     <image:image><image:loc>https://www.crea8hub.com/blog/nigeria-marketing-statistics-2026/og.png</image:loc></image:image>
   </url>
+  <url>
+    <loc>https://www.crea8hub.com/digital-skills-training/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
