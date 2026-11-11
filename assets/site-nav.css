@@ -72,3 +72,11 @@ html{scroll-padding-top:84px}
 /* Paired call-to-action buttons (WhatsApp + booking) */
 .cta-pair{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 .cta-band .cta-pair{justify-content:center}
+
+/* Footer social links: their own row under the logo and contact line on every
+   page (order 2 keeps them above the homepage's services row, which is order 3). */
+.sf-social{display:flex;flex-basis:100%;order:2;gap:10px;align-items:center;margin:0;padding:0;list-style:none}
+.sf-social a{display:grid;place-items:center;width:38px;height:38px;border:1px solid rgba(255,255,255,.16);border-radius:50%;color:#8f8f8a;transition:color .18s,background-color .18s,border-color .18s}
+.sf-social a:hover,.sf-social a:focus-visible{color:#000;background:#84C226;border-color:#84C226}
+.sf-social a:focus-visible{outline:2px solid #84C226;outline-offset:3px}
+.sf-social svg{width:16px;height:16px;fill:currentColor;display:block}
