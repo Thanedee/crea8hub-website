@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /css-src/
 
 Sitemap: https://www.crea8hub.com/sitemap.xml
