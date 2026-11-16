@@ -112,3 +112,16 @@
   .post-body>p,.post-body li{font-size:17px}
 }
 @media print{.tool-link,.wa-float,.sn{display:none!important}}
+
+/* price comparison table */
+.price-table{overflow-x:auto;margin:26px 0 8px;border:1px solid var(--line);border-radius:16px;background:#fff}
+.price-table table{width:100%;border-collapse:collapse;min-width:640px;font-size:15px;line-height:1.5}
+.price-table th,.price-table td{text-align:left;vertical-align:top;padding:14px 16px;border-bottom:1px solid var(--line)}
+.price-table thead th{background:#000;color:#fff;font-family:var(--head);font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.price-table tbody th{font-family:var(--head);font-weight:800;color:#000;white-space:nowrap}
+.price-table tbody tr:last-child th,.price-table tbody tr:last-child td{border-bottom:0}
+.price-table tbody tr:last-child{background:rgba(132,194,38,.1)}
+.price-table sup,.table-note sup{font-size:.7em;color:#3d6b00}
+.takeaways.wide li{grid-template-columns:130px 1fr}
+@media (max-width:760px){.takeaways.wide li{grid-template-columns:1fr}}
+.post-body>p.table-note{font-size:13.5px;line-height:1.55;color:var(--muted);margin:0 0 20px}
